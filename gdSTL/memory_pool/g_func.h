@@ -235,6 +235,7 @@ extern struct __random_access_iterator_tag random_access_iterator_tag;
 		}
 	}
 	template<class Forward_iterator,class T,class T1>
+	//dispatch
 	inline void __uninitialized_fill(Forward_iterator first, Forward_iterator last, const T& value, T1*){
 		typedef typename __iterator_traits<T1>::is_pod is_pod;
 		__uninitialized_fill_x(first, last, value, is_pod());
